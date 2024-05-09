@@ -22,7 +22,7 @@ model = joblib.load(r"F:\second_year\ai\NLP-Project\Sentiment_Analysis.joblib")
 vectorizer = joblib.load(r"F:\second_year\ai\NLP-Project\tf_idf_vectorizer.joblib")
 st.set_page_config(
     page_title='Sentiment Classifier',
-    page_icon=':emotions:'
+    page_icon=':heart:'
 )
 
 def clean_text(sentence):
