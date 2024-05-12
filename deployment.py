@@ -42,11 +42,10 @@ def clean_text(sentence):
   
 
 def clean_hashtags(hashtags_list):
-    """Cleans hashtags from a list and returns a list of cleaned hashtags."""
     cleaned_hashtags = []
     for hashtag in hashtags_list:
         if hashtag.startswith("#"):
-            cleaned_hashtags.append(hashtag[1:])  # Remove the leading # symbol
+            cleaned_hashtags.append(hashtag[1:]) 
     return cleaned_hashtags
 
 st.write('# Sentiment Classifier')
