@@ -39,15 +39,25 @@ def clean_text(sentence):
     sentence = ' '.join(tokens)
 
     return sentence
+  
 
+def clean_hashtags(hashtags_list):
+    """Cleans hashtags from a list and returns a list of cleaned hashtags."""
+    cleaned_hashtags = []
+    for hashtag in hashtags_list:
+        if hashtag.startswith("#"):
+            cleaned_hashtags.append(hashtag[1:])  # Remove the leading # symbol
+    return cleaned_hashtags
 
 st.write('# Sentiment Classifier')
 st.write('---')
 st.subheader('Enter your text and hashtags to analyze sentiment')
 # User input
 text = st.text_area("Enter your text:", height=100)
-text = text 
+hashtags = st.text_area("Enter hashtags:", height=100).split() 
+cleaned_hashtags = clean_hashtags(hashtags)
 clean_text(str(text))
+text_with_hashtags = " ".join([text] + hashtags)
 if st.button("Analyze Sentiment"):
   text_vector = vectorizer.transform([text])
   y_predict = model.predict(text_vector)
