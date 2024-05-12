@@ -18,7 +18,17 @@ from sklearn.model_selection import train_test_split
 from sklearn.model_selection import train_test_split
 from textblob import TextBlob
 import re
-model = joblib.load(r"F:\second_year\ai\NLP-Project\Sentiment_Analysis.joblib")
+
+models = {
+    "K-Nearest Neighbors": joblib.load(r"F:\second_year\ai\NLP-Project\knn.joblib"),
+    "Decision Tree": joblib.load(r"F:\second_year\ai\NLP-Project\dt.joblib"),
+    "Logistic Regression": joblib.load(r"F:\second_year\ai\NLP-Project\lr.joblib"),
+    "Naive Bayes": joblib.load(r"F:\second_year\ai\NLP-Project\mnb.joblib"),
+    "Random Forest": joblib.load(r"F:\second_year\ai\NLP-Project\rf.joblib"),
+    "Support Vector Machine": joblib.load(r"F:\second_year\ai\NLP-Project\svm.joblib"),
+
+    
+}
 vectorizer = joblib.load(r"F:\second_year\ai\NLP-Project\tf_idf_vectorizer.joblib")
 st.set_page_config(
     page_title='Sentiment Classifier',
@@ -47,7 +57,13 @@ def clean_hashtags(hashtags_list):
         if hashtag.startswith("#"):
             cleaned_hashtags.append(hashtag[1:]) 
     return cleaned_hashtags
-
+  
+selected_model_name = option_menu(
+    menu_title="Select Model",
+    options=list(models.keys()),
+    default_index=0,  # Set default model index (optional)
+)
+selected_model = models[selected_model_name]
 st.write('# Sentiment Classifier')
 st.write('---')
 st.subheader('Enter your text and hashtags to analyze sentiment')
@@ -59,7 +75,7 @@ clean_text(str(text))
 text_with_hashtags = " ".join([text] + hashtags)
 if st.button("Analyze Sentiment"):
   text_vector = vectorizer.transform([text])
-  y_predict = model.predict(text_vector)
+  y_predict = selected_model.predict(text_vector)
   if(y_predict == 0):
     st.write("You are feeling positive emotions, Live, Love, Laugh!")
   elif(y_predict == 1):
