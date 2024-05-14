@@ -16,20 +16,20 @@ from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import train_test_split
-from textblob import TextBlob
+#from textblob import TextBlob
 import re
 
 models = {
-    "K-Nearest Neighbors": joblib.load(r"F:\second_year\ai\NLP-Project\knn.joblib"),
-    "Decision Tree": joblib.load(r"F:\second_year\ai\NLP-Project\dt.joblib"),
-    "Logistic Regression": joblib.load(r"F:\second_year\ai\NLP-Project\lr.joblib"),
-    "Naive Bayes": joblib.load(r"F:\second_year\ai\NLP-Project\mnb.joblib"),
-    "Random Forest": joblib.load(r"F:\second_year\ai\NLP-Project\rf.joblib"),
-    "Support Vector Machine": joblib.load(r"F:\second_year\ai\NLP-Project\svm.joblib"),
+    "K-Nearest Neighbors": joblib.load("knn.joblib"),
+    "Decision Tree": joblib.load("dt.joblib"),
+    "Logistic Regression": joblib.load("lr.joblib"),
+    "Naive Bayes": joblib.load("mnb.joblib"),
+    "Random Forest": joblib.load("rf.joblib"),
+    "Support Vector Machine": joblib.load("svm.joblib"),
 
     
 }
-vectorizer = joblib.load(r"F:\second_year\ai\NLP-Project\tf_idf_vectorizer.joblib")
+vectorizer = joblib.load("tf_idf_vectorizer.joblib")
 st.set_page_config(
     page_title='Sentiment Classifier',
     page_icon=':heart:'
