@@ -107,20 +107,19 @@ Using Bow Training Model
 
  -------------     
 <h3 id="-how-to-run">🛠️How to run</h3>
-First, install dependencies   
-```bash
-# clone project   
+
+- Clone the project   
+```bash  
 git clone https://github.com/Social-Media-Sentiment-Analysis/NLP-Project
 ```
-```bach
-# install dependencies   
+- install dependencies
+```bach  
 cd NLP-Project 
 pip install -r requirements.txt
- ```   
- Next, you run this code and the deployment will work locally with you.   
- ```bash
+```   
+ - Next, you run this code and the deployment will work locally with you.   
+```bash
 streamlit run deployment.py
-
 ```
 
 
