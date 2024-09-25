@@ -22,9 +22,10 @@
 - [Screenshots](#-screenshots)
 - [How to run](#-how-to-run)
  
-<h3 id="-description">🚀Section Title</h3>   
+<h3 id="-description">🚀Description</h3>   
 Social media has become a powerful platform for public opinion and brand perception.  This notebook explores the use of Artificial Intelligence (AI) techniques, specifically sentiment analysis, to understand the sentiment expressed in social media data.  We will delve into the process of data collection, pre-processing, model building, and evaluation to build a system that can automatically classify social media posts as positive, negative, or neutral.
 
+-------------      
  
 <h3 id="-our-progress">⏳Our Progress</h3>
 We divided the project into five stages:
@@ -68,7 +69,7 @@ We divided the project into five stages:
 #### Deployment
 * **Models:** After the evaluation we agreed that our best model is `Support Vector Machine` but we gave the user in the deployment the ability to use all the models we trained.
 
- 
+ -------------       
 <h3 id="-results">🔬Results</h3>
 
 Using Bow Training Model
@@ -93,7 +94,7 @@ Using Bow Training Model
 | Decision Tree | 100% | 61% |
 | Random Forest | 100% | 76% |
 
-
+--------------    
 <h3 id="-screenshots">📸 Screenshots</h3>
 - Title Page
 ![](title_page.png)  
@@ -103,7 +104,8 @@ Using Bow Training Model
 ![](neutral_sentiment.png)   
 - Negative Prediction
 ![](negative_sentiment.png)
-   
+
+ -------------     
 <h3 id="-how-to-run">🛠️How to run</h3>
 First, install dependencies   
 ```bash
