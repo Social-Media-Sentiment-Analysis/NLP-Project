@@ -1,0 +1,12 @@
+streamlit==1.26.0
+requests==2.29.0 
+pandas==1.5.3 
+streamlit_option_menu==0.3.12 
+streamlit_lottie==0.0.5 
+joblib==1.1.1
+numpy==1.24.3 
+pillow==9.4.0 
+matplotlib==3.7.1
+seaborn==0.12.2 
+nltk==3.7  
+sklearn==1.2.2
