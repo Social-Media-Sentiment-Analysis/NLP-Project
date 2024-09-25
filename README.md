@@ -97,9 +97,9 @@ Using Bow Training Model
 --------------    
 <h3 id="-screenshots">📸 Screenshots</h3>
 - Title Page
-![](title_page.png)  
+![](title_page.png)    
 - Positive Prediction
-![](positive_sentiment.png)   
+![](positive_sentiment.png)     
 - Neutral Prediction
 ![](neutral_sentiment.png)   
 - Negative Prediction
