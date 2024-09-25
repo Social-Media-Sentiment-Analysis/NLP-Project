@@ -28,7 +28,8 @@ Social media has become a powerful platform for public opinion and brand percept
 -------------      
  
 <h3 id="-our-progress">⏳Our Progress</h3>
-We divided the project into five stages:
+We divided the project into five stages:      
+    
 #### Data Exploration
 
 * **Data import:** We loaded our data into pandas dataframe (736 rows and 14)
